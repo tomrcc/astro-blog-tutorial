@@ -1,25 +1,23 @@
 _schema: _schema
 source: /src/
+
 paths:
   uploads: public/uploads
   static: public
 collections_config:
-  src_pages_posts:
-    path: src/pages/posts
-    name: Src Pages Posts
-    icon: sports_esports
-    disable_url: false
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+  posts:
+    path: src/content/posts
+    name: Posts
+    icon: newspaper
+    _enabled_editors:
+      - content
   pages:
-    path: ''
+    path: 'src/content/pages'
     name: Pages
-    icon: wysiwyg
-    disable_url: true
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    icon: laptop
+    _enabled_editors:
+      - visual
+
 timezone: Pacific/Auckland
 markdown:
   engine: commonmark
