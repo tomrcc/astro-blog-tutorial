@@ -13,7 +13,13 @@
   "dependencies": {
     "@astrojs/preact": "^3.0.0",
     "@astrojs/rss": "^3.0.0",
+    "@bookshop/astro-bookshop": "3.11.0",
     "astro": "^4.16.7",
     "preact": "^10.11.3"
+  },
+  "devDependencies": {
+    "@bookshop/astro-engine": "3.11.0",
+    "@bookshop/browser": "3.11.0",
+    "@bookshop/generate": "3.11.0"
   }
 }
