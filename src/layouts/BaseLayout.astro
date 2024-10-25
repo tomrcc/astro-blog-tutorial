@@ -2,7 +2,22 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+const { title } = Astro.props;
+
+export interface SEOProps {
+  page_description: string | null;
+  featured_image: string | null;
+  featured_image_alt: string | null;
+  canonical_url: string | null;
+  no_index: boolean | null;
+  open_graph_type: string | null;
+  author_twitter_handle: string | null;
+}
+
+export interface Props {
+  title: string;
+  seo?: SEOProps;
+}
 ---
 
 <html lang="en">
@@ -11,11 +26,11 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{title}</title>
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
+    <h1>{title}</h1>
     <slot />
     <Footer />
     <script>
