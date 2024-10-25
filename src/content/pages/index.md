@@ -8,5 +8,11 @@ seo:
   author_twitter_handle:
   open_graph_type:
   no_index: false
-content_blocks: []
+content_blocks:
+  - _bookshop_name: Test
+    messages:
+      - Hej
+      - Hallo
+      - Hola
+      - Habari
 ---

@@ -1,0 +1,6 @@
+---
+import Greeting from "../Greeting/Greeting";
+const { messages } = Astro.props;
+---
+
+{(<Greeting client:only messages={messages} />)}
